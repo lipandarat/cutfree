@@ -108,8 +108,8 @@ function parseCli(argv: string[]): RuntimeConfig {
     port: Number(process.env.PORT ?? 47821),
     // Loopback by default; opt into all-interfaces exposure explicitly via HOST.
     host: process.env.HOST?.trim() || '127.0.0.1',
-    upstream: process.env.ANTHROPIC_UPSTREAM ?? sharedUpstream ?? 'https://api.anthropic.com',
-    openAIUpstream: process.env.OPENAI_UPSTREAM ?? sharedUpstream ?? 'https://api.openai.com',
+    upstream: process.env.ANTHROPIC_UPSTREAM ?? sharedUpstream ?? 'http://localhost:20128',
+    openAIUpstream: process.env.OPENAI_UPSTREAM ?? sharedUpstream ?? 'http://localhost:20128',
     openAIApiKey: process.env.OPENAI_API_KEY,
     provider: parseProvider(process.env.PXPIPE_PROVIDER),
     gatewayBaseUrl: process.env.PXPIPE_GATEWAY_BASE_URL,
@@ -152,9 +152,9 @@ Environment:
                           is unauthenticated and serves captured request context.
   PXPIPE_UPSTREAM         upstream API base for every API family
   ANTHROPIC_UPSTREAM      Anthropic API base; overrides PXPIPE_UPSTREAM
-                           (default https://api.anthropic.com)
+                           (default http://localhost:20128)
   OPENAI_UPSTREAM         OpenAI API base; overrides PXPIPE_UPSTREAM
-                           (default https://api.openai.com)
+                           (default http://localhost:20128)
   OPENAI_API_KEY          optional OpenAI key override; otherwise forwarded
   PXPIPE_PROVIDER         optional: 'cloudflare-ai-gateway' — route both API
                           families through one gateway base URL

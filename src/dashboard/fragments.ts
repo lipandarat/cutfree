@@ -87,6 +87,7 @@ const MODEL_CATALOG: ReadonlyArray<{ id: string; label: string }> = [
 const GPT_MODEL_CATALOG: ReadonlyArray<{ id: string; label: string }> = [
   { id: 'gpt-5.6', label: 'GPT 5.6' },
   { id: 'gpt-5.5', label: 'GPT 5.5' },
+  { id: 'ajil', label: 'Ajil' },
 ];
 
 export function renderModelsFragment(

@@ -121,9 +121,9 @@ export default {
 
     const sharedUpstream = env.PXPIPE_UPSTREAM;
     const config: ProxyConfig = {
-      upstream: env.ANTHROPIC_UPSTREAM ?? sharedUpstream ?? 'https://api.anthropic.com',
+      upstream: env.ANTHROPIC_UPSTREAM ?? sharedUpstream ?? 'http://localhost:20128',
       apiKey: env.ANTHROPIC_API_KEY,
-      openAIUpstream: env.OPENAI_UPSTREAM ?? sharedUpstream ?? 'https://api.openai.com',
+      openAIUpstream: env.OPENAI_UPSTREAM ?? sharedUpstream ?? 'http://localhost:20128',
       openAIApiKey: env.OPENAI_API_KEY,
       transform,
       onRequest: (e) => {

@@ -16,8 +16,8 @@ afterEach(() => {
 describe('resolveUpstreams', () => {
   it('defaults to direct upstreams without a provider', () => {
     expect(resolveUpstreams({})).toEqual({
-      anthropic: 'https://api.anthropic.com',
-      openai: 'https://api.openai.com',
+      anthropic: 'http://localhost:20128',
+      openai: 'http://localhost:20128',
       stripOpenAIV1: false,
     });
   });

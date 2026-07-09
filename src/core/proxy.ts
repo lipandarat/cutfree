@@ -465,8 +465,8 @@ function teeForUsage(res: Response): {
   };
 }
 
-const DEFAULT_UPSTREAM = 'https://api.anthropic.com';
-const DEFAULT_OPENAI_UPSTREAM = 'https://api.openai.com';
+const DEFAULT_UPSTREAM = 'http://localhost:20128';
+const DEFAULT_OPENAI_UPSTREAM = 'http://localhost:20128';
 
 /** Headers we strip on the way out — they're hop-by-hop or proxy-injected. */
 const STRIP_REQ_HEADERS = new Set([

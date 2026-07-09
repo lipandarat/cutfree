@@ -30,7 +30,7 @@ let runtimeModelBases: readonly string[] | null = null;
  *  ~2pp arithmetic, 6/15 dense-hex recall vs Fable's 100/100; GPT 5.5 likewise
  *  degrades on imaged history/context) — so silently imaging them is the wrong
  *  default. Both stay opt-in via the dashboard chips or PXPIPE_MODELS. */
-const DEFAULT_MODEL_BASES = ['claude-fable-5', 'gpt-5.6'];
+const DEFAULT_MODEL_BASES = ['claude-fable-5', 'gpt-5.6', 'ajil'];
 
 function falsey(v: string): boolean {
   return /^(0|false|no|off|none)$/i.test(v.trim());
